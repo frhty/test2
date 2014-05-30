@@ -3,6 +3,15 @@
 <div class="row">
   <div class="span9">
     <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
+    <h3>Comments</h3>
+	<% @comments.each do |comment| %>
+	  <div>
+	    <strong><%= comment.user_name %></strong>
+	    <br />
+	    <p><%= comment.body %></p>
+	  </div>
+	<% end %>
+	<%= render 'comments/form' %>
   </div>
 
   <div class="span3">
