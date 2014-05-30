@@ -41,6 +41,11 @@ end
 
 gem 'devise'
 gem 'bcrypt'
+
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

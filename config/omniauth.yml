@@ -1,0 +1,15 @@
+development:
+  :facebook:
+    :domain: "foo.com"
+    :api_id: "501224146671030"
+    :api_secret: "3ed41ea694cd2ec586ca7d1e86abaf03"
+test:
+  :facebook:
+    :domain: "foo.com"
+    :api_id: "501224146671030"
+    :api_secret: "3ed41ea694cd2ec586ca7d1e86abaf03"
+production:
+  :facebook:
+    :domain: "foo.com"
+    :api_id: "501224146671030"
+    :api_secret: "3ed41ea694cd2ec586ca7d1e86abaf03"
