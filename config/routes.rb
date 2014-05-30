@@ -1,21 +1,11 @@
 Railsgirls::Application.routes.draw do
-    #get '/login', :to => 'sessions#new', :as => :login
-    #get '/logout', :to => 'sessions#destory'   
-    get '/auth/:provider/callback', :to => 'sessions#create'
-    get '/auth/failure' => 'sessions#failure'
-    devise_for :users do
-      get '/users/sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-      get '/users/sign_out' => 'devise/sessions#destroy', :as => :user_sign_out
-    end
-
   get "pages/info"
   resources :ideas
   resources :comments
   root to: redirect('/ideas')
 
 
-
-  #devise_for :users
+  devise_for :users, :controllers => {  :registration => "registration",:omniauth_callbacks => "omniauth_callbacks" }
   
 
 
