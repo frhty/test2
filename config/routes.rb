@@ -1,6 +1,5 @@
 Railsgirls::Application.routes.draw do
-  devise_for :users
-  resources :comments
+
 
   get "pages/info"
   resources :ideas
@@ -8,7 +7,14 @@ Railsgirls::Application.routes.draw do
 
 
 
-
+    #devise_for :users do
+    # # get '/users/sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+     # get '/users/sign_out' => 'devise/sessions#destroy', :as => :user_sign_out
+    #end
+  devise_for :users
+  resources :comments
+    match '/auth/:provider/callback', :to => 'sessions#create'
+    match '/auth/failure' => 'sessions#failure'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
