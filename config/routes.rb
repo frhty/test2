@@ -5,7 +5,7 @@ Railsgirls::Application.routes.draw do
   root to: redirect('/ideas')
 
 
-  devise_for :users, :controllers => {  :registration => "registration",:omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   
 
 

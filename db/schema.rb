@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20140530080338) do
 
   create_table "authorizations", force: true do |t|
     t.string   "provider"
-    t.string   "username"
     t.string   "uid"
     t.integer  "user_id"
     t.datetime "created_at"
