@@ -6,8 +6,7 @@ Railsgirls::Application.routes.draw do
   resources :ideas
   root to: redirect('/ideas')
 
-  match '/auth/:provider/callback', :to => 'sessions#create'
-  match '/auth/failure' => 'sessions#failure'
+
 
 
 
